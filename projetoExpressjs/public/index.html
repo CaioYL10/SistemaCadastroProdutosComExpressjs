@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Aplicando API</title>
+</head>
+<body>
+    <div class="inputs">
+        <h1>Preencha para Criar o produto!</h1>
+        <input type="text" id="nome" placeholder="Nome">
+        <input type="number" id="preco" placeholder="Preço">
+        <input type="text" id="categoria" placeholder="Categoria">
+        <input type="number" id="quantidade" placeholder="Quantidade">
+        <button type="button" onclick="enviarDados()" class="btn-send">Enviar</button>
+    </div>
+
+    <div class="direita">
+        <input type="text" id="busca" placeholder="Buscar por nome..." oninput="buscarProduto()">
+
+        <div id="resumo">
+            <p>Total de produtos: <strong id="totalProdutos">0</strong></p>
+            <p>Soma dos preços: <strong id="somaPrecos">R$ 0</strong></p>
+            <button type="button" onclick="limpartudo()">Limpar Tudo</button>
+        </div>
+
+        <ul id="lista">
+            <!-- Onde vai conter os li -->
+        </ul>
+    </div>
+
+    <div class="popUp" id="popUp">
+        <input type="text" id="novoNome" placeholder="Novo nome">
+        <input type="number" id="novoPreco" placeholder="Novo preço">
+        <input type="text" id="novaCategoria" placeholder="Nova Categoria">
+        <input type="number" id="novaQuantidade" placeholder="Nova Quantidade">
+        <button id="btnEditar" type="button">Editar</button>
+        <div class="sair"><i id="sair" class="fa-solid fa-x"></i></div>
+    </div>
+
+    <div class="popUp2" id="popUp2">
+        <p>Você tem certeza?</p>
+        <button id="btnConfirm">Confirmar</button>
+        <div class="sair"><i id="sair2" class="fa-solid fa-x"></i></div>
+    </div>
+
+    <div class="circleBlur"></div>
+    <div class="circleBlur"></div>
+</body>
+</html>
